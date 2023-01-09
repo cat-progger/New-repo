@@ -20,6 +20,8 @@ jobs:
   Gradle-Run-Tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - run: gradle init
       - run: gradle build
       - run: gradle test
